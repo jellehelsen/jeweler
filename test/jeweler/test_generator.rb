@@ -31,6 +31,7 @@ class TestGenerator < Test::Unit::TestCase
   
   should "have the correct git-remote" do
     assert_equal 'user@host:/path/to/repo', build_generator(:shoulda, {:git_remote => "user@host:/path/to/repo"}).git_remote
+    assert_equal 'git@github.com:johndoe/the-perfect-gem.git', build_generator.git_remote 
   end
 
   def self.should_have_generator_attribute(attribute, value)
